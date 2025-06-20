@@ -1,0 +1,135 @@
+# ChangeLog for sci-ml/ollama-bin
+# Copyright 1999-2025 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+* ollama-bin-9999 Exp
+	(18 Jun 2025) jay <jaypeche@gmail.com>
+	+ Add ebuild 9999, at latest version
+
+* ollama-bin-0.9.2 release
+	(18 Jun 2025) jay <jaypeche@gmail.com>
+	+ Ollama version bump
+	+ Ebuild moved to sci-ml/ollama-bin
+
+* ollama-bin-0.9.1 release
+	(14 Jun 2025) jay <jaypeche@gmail.com>
+	+ Ollama version bump
+
+* ollama-bin-0.9.0 release
+	(30 May 2025) jay <jaypeche@gmail.com>
+	+ Ollama major version bump
+	+ Add thinking functionality
+
+* ollama-bin-0.8.0 release
+	(28 May 2025) jay <jaypeche@gmail.com>
+	+ Ollama major version bump
+	+ Add stream responses with tool calls
+
+* ollama-bin-0.7.1 release
+	(24 May 2025) jay <jaypeche@gmail.com>
+	+ Ollama version bump
+
+* ollama-bin-0.7.0 release
+	(15 May 2025) jay <jaypeche@gmail.com>
+	+ Ollama major version bump
+	+ Multimodal models support
+
+* ollama-bin-0.6.8 release
+	(5 May 2025) jay <jaypeche@gmail.com>
+	+ Ollama version bump
+
+* ollama-bin-0.6.7 release
+	(2 May 2025) jay <jaypeche@gmail.com>
+	+ Ollama version bump
+
+* ollama-bin-0.6.6 release
+	(19 Apr 2025) jay <jaypeche@gmail.com>
+	+ Ollama version bump
+
+* ollama-bin-0.6.5 release
+	(7 Apr 2025) jay <jaypeche@gmail.com>
+	+ Ollama version bump
+	+ Fix ollama service on localhost
+
+* ollama-bin-0.6.4 release
+	(3 Apr 2025) jay <jaypeche@gmail.com>
+	+ Ollama version bump
+
+* ollama-bin-0.6.3 release
+	(28 Mar 2025) jay <jaypeche@gmail.com>
+	+ Ollama version bump
+
+* ollama-bin-0.6.2 release
+	(18 Mar 2025) jay <jaypeche@gmail.com>
+	+ Ollama version bump
+
+* ollama-bin-0.6.1 release
+	(15 Mar 2025) jay <jaypeche@gmail.com>
+	+ Ollama version bump
+	+ Allow only localhost by default, to preserve of eventuals dataleaks
+
+* ollama-bin-0.6.0 release
+	(12 Mar 2025) jay <jaypeche@gmail.com>
+	+ Ollama version bump
+
+* ollama-bin-0.5.13 release
+	(4 Mar 2025) jay <jaypeche@gmail.com>
+	+ Ollama version bump
+
+* ollama-bin-0.5.12 release
+	(25 Feb 2025) jay <jaypeche@gmail.com>
+	+ Ollama version bump
+
+* ollama-bin-0.5.11 release
+	(16 Feb 2025) jay <jaypeche@gmail.com>
+	+ Ollama version bump
+	+ SRC_URI cosmetic
+
+* ollama-bin-0.5.9 release
+	(13 Feb 2025) jay <jaypeche@gmail.com>
+	+ Ollama version bump
+	+ Fix case switch without same tarball name
+        + Explicit use flags
+
+* ollama-bin-0.5.8 pre-release
+	(11 Feb 2025) jay <jaypeche@gmail.com>
+	+ Ollama version bump
+
+* ollama-bin-0.5.7-r1 revision 1
+	(22 Jan 2025) jay <jaypeche@gmail.com>
+	+ Ollama systemd Unit service fix
+
+* ollama-bin-0.5.7 release
+	(17 Jan 2025) jay <jaypeche@gmail.com>
+	+ Ollama version bump
+
+* ollama-bin-0.5.6 release
+	(15 Jan 2025) jay <jaypeche@gmail.com>
+	+ Ollama version bump
+
+* ollama-bin-0.5.5 release
+        (14 Jan 2025) jay <jaypeche@gmail.com>
+        + Ollama version bump
+
+* ollama-bin-0.5.5-r0 revision 0
+        (09 Jan 2025) jay <jaypeche@gmail.com>
+        + Ollama version bump
+
+* ollama-bin-0.5.4-r4 revision 4
+        (07 Jan 2025) jay <jaypeche@gmail.com>
+        + Add case switch versions
+
+* ollama-bin-0.5.4-r3 revision 3
+        (04 Jan 2025) jay <jaypeche@gmail.com>
+        + Add binary tarball URI for complete AMD ROCm experimental support
+	+ Small Models (3b) running on raspberrypi 4/5 ARM64 with RAM 8Go
+
+* ollama-bin-0.5.4-r2 revision 2
+        (28 Dec 2024) jay <jaypeche@gmail.com>
+        + Add AMD RADEON experimental support
+	+ Add init/systemd service running as ollama user
+	+ Add preserved folder for models and checksums
+
+* ollama-bin-0.5.4-r1 revision 1
+        (26 Dec 2024) jay <jaypeche@gmail.com>
+        + initial ebuild for latest release, based on xgqt.org ebuild (Exp)

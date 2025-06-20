@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+
+<pkgmetadata>
+ <longdescription>
+ Get up and running with large language models
+ </longdescription>
+  <maintainer type="person">
+    <email>xgqt@xgqt.org</email>
+    <name>Maciej Barć</name>
+  </maintainer>
+  <maintainer type="person">
+    <email>contact@pingwho.org</email>
+    <name>jaypeche</name>
+  </maintainer>
+  <use>
+	<flag name="cuda"> Support for Nvidia CUDA compatible cards </flag>
+	<flag name="rocm"> Support for AMD ROCm compatible cards </flag>
+	<flag name="systemd"> Include Ollama systemd service </flag>
+  </use>
+  <upstream>
+    <bugs-to>https://github.com/ollama/ollama/issues/</bugs-to>
+    <remote-id type="github">ollama/ollama</remote-id>
+  </upstream>
+</pkgmetadata>
