@@ -1,2 +1,2 @@
 # pingwho-overlay
-Gentoo Linux pingwho's overlay
+Gentoo Linux overlay @pingwho.org
