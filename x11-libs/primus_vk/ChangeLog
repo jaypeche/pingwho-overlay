@@ -1,0 +1,134 @@
+# ChangeLog for x11-libs/primus_vk
+# Copyright 1999-2024 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+* primus_vk-9999
+        (6 Dec 2024) jay <jaypeche@gmail.com>
+        + primus_vk git-r3 multilib @latest_git_commit (Exp)
+
+* primus_vk-1.6.4-r6 revision 6
+        (6 Dec 2024) jay <jaypeche@gmail.com>
+	+ vulkan core stable version bump
+
+* primus_vk-1.6.4-r5 revision 5
+        (6 Aug 2024) jay <jaypeche@gmail.com>
+	+ vulkan core stable version bump
+
+* primus_vk-1.6.4-r4 revision 4
+        (21 Jul 2024) jay <jaypeche@gmail.com>
+	+ vulkan core stable version bump
+
+* primus_vk-1.6.4-r3 revision 3
+        (17 May	2024) jay <jaypeche@gmail.com>
+	+ vulkan core stable version bump
+
+* primus_vk-1.6.4-r2 revision 2
+        (5 Apr 2024) jay <jaypeche@gmail.com>
+	+ vulkan core stable version bump
+
+* primus_vk-1.6.4-r1 revision 1
+        (2 Dec 2023) jay <jaypeche@gmail.com>
+	+ primus_vk version bump
+	- removed obsolet ebuild
+
+* primus_vk-1.6.3-r4 revision 4
+        (29 Nov 2023) jay <jaypeche@gmail.com>
+        + add new 'dev-util/vulkan-utility-libraries' as dependencies
+	+ locked on commit f877bf1 for own dispatch table structs (Issue #93)
+
+* primus_vk-1.6.3-r3 revision 3
+        (11 Nov 2023) jay <jaypeche@gmail.com>
+        + vulkan core stable version bump
+
+* primus_vk-1.6.3-r2 revision 2
+        (1 Sep 2023) jay <jaypeche@gmail.com>
+        + ebuild migration to EAPI 8
+
+* primus_vk-1.6.3-r1 revision 1
+	(28 Jul 2023) jay <jaypeche@gmail.com>
+	+ primus_vk version bump
+	+ vulkan core stable version bump
+	+ fix dependencies
+
+* primus_vk-1.6.2-r9 revision 9
+	(8 Jul 2023) jay <jaypeche@gmail.com>
+	+ vulkan core stable version bump
+	+ fix dependencies
+
+* primus_vk-1.6.2-r8 revision 8
+	(18 May 2023) jay <jaypeche@gmail.com>
+	+ vulkan header search path fix (Issue #91)
+
+* primus_vk-1.6.2-r7 revision 7
+	(18 Apr 2023) jay <jaypeche@gmail.com>
+	+ vulkan core stable version bump
+
+* primus_vk-1.6.2-r6 revision 6
+	(3 Mar 2023) jay <jaypeche@gmail.com>
+	+ vulkan core stable version bump
+	+ fix dependencies
+
+* primus_vk-1.6.2-r5 revision 5
+	(5 Feb 2023) jay <jaypeche@gmail.com>
+	+ vulkan core stable version bump
+	+ fix dependencies
+
+* primus_vk-1.6.2-r4 revision 4
+	(5 Dec 2022) jay <jaypeche@gmail.com>
+	+ vulkan core stable version bump
+	+ fix dependencies
+
+* primus_vk-1.6.2-r3 revision 3
+	(11 Nov 2022) jay <jaypeche@gmail.com>
+	+ vulkan core stable version bump
+	+ fix dependencies
+
+* primus_vk-1.6.2-r2 revision 2
+	(18 Oct 2022) jay <jaypeche@gmail.com>
+	+ libprimus_vk.so requires wayland header
+	+ fix dependencies
+
+* primus_vk-1.6.2-r1 revision 1
+	(7 Aug 2022) jay <jaypeche@gmail.com>
+	+ primus_vk version bump
+	+ vulkan core stable version bump
+	+ fix dependencies
+	+ repoman check
+
+* primus_vk-1.6.1-r7 revision 7
+	(19 Jun 2022) jay <jaypeche@gmail.com>
+	+ vulkan core stable version bump
+	+ fix dependencies
+	+ repoman check
+
+* primus_vk-1.6.1-r6 revision 6
+	(21 May 2022) jay <jaypeche@gmail.com>
+	+ vulkan core stable version bump
+	+ repoman check
+
+* primus_vk-1.6.1-r5 revision 5
+	(7 Mar 2022) jay <jaypeche@gmail.com>
+	+ EAPI 7
+	+ fix !multilib applied patches
+	- removed obsolet ebuild
+
+* primus_vk-1.6.1-r4 revision 4
+	(27 Dec 2021) jay <jaypeche@gmail.com>
+	+ vulkan core version bump
+	+ debug_tools_path_fix
+	- removed obsolet ebuild
+
+* primus_vk-1.6.1-r3 revision 3
+	(16 Nov 2021) jay <jaypeche@gmail.com>
+	+ vulkan core version bump
+	+ primus_diag lib fix
+	+ primus_segfault_workaround_issue86
+	+ repoman check
+	- removed obsolet ebuild
+
+* primus_vk-1.6.1-r2 revision 2
+	(15 Aug 2021) jay <jaypeche@gmail.com>
+	+ primus_vk git-r3 multilib rev2
+	+ debug useflag
+	- removed obsolet ebuild
+
