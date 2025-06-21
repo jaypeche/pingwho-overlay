@@ -2,7 +2,7 @@
 <repositories version="1.0">
   <repo quality="experimental" status="unofficial">
     <name>pingwho-overlay</name>
-      <description lang="en">Gentoo Linux Overlay @pingwho.org</description>
+      <description lang="en">Gentoo Linux overlay @pingwho.org</description>
         <homepage>https://github.com/jaypeche/pingwho-overlay</homepage>
         <maintainer type="person">
             <name>jaypeche</name>
