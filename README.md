@@ -10,15 +10,15 @@ in order to redistribute them via this Gentoo repository.
 
 
 ```
-root@localhost # emerge -av eselect-repository
+emerge -av eselect-repository
 ```
 
 ```
-root@localhost # eselect repository add pingwho-overlay git git://github.com/jaypeche/pingwho-overlay.git
+eselect repository add pingwho-overlay git git://github.com/jaypeche/pingwho-overlay.git
 ```
 
 ```
-root@localhost # emaint sync -r pingwho-overlay 
+emaint sync -r pingwho-overlay 
 ```
 
 
