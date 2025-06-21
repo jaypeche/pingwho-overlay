@@ -10,5 +10,6 @@
         </maintainer>
         <source type="git">https://github.com/jaypeche/pingwho-overlay.git</source>
         <feed>https://github.com/jaypeche/pingwho-overlay/commits/master.atom</feed>
+	<bugs-to>https://github.com/jaypeche/pingwho-overlay/issues</bugs-to>
   </repo>
 </repositories>
