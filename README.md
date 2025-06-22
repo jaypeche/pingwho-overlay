@@ -14,7 +14,7 @@ emerge -av eselect-repository
 ```
 
 ```
-eselect repository add pingwho-overlay git git://github.com/jaypeche/pingwho-overlay.git
+eselect repository add pingwho-overlay git https://github.com/jaypeche/pingwho-overlay.git
 ```
 
 ```
