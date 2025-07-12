@@ -2,14 +2,14 @@
 <repositories version="1.0">
   <repo quality="experimental" status="unofficial">
     <name>pingwho-overlay</name>
-      <description lang="en">Gentoo Linux overlay @pingwho.org</description>
-        <homepage>https://github.com/jaypeche/pingwho-overlay</homepage>
-        <maintainer type="person">
-            <name>jaypeche</name>
-            <email>contact@pingwho.org</email>
-        </maintainer>
-        <source type="git">https://github.com/jaypeche/pingwho-overlay.git</source>
-        <feed>https://github.com/jaypeche/pingwho-overlay/commits/master.atom</feed>
-	<bugs-to>https://github.com/jaypeche/pingwho-overlay/issues</bugs-to>
+    <description lang="en">Gentoo Linux overlay @pingwho.org</description>
+    <homepage>https://github.com/jaypeche/pingwho-overlay</homepage>
+    <owner type="person">
+      <email>jaypeche@gmail.com</email>
+      <name>jaypeche</name>
+    </owner>
+    <source type="git">https://github.com/jaypeche/pingwho-overlay.git</source>
+    <source type="git">git+ssh://git@github.com/jaypeche/pingwho-overlay.git</source>
+    <feed>https://github.com/jaypeche/pingwho-overlay/commits/master.atom</feed>
   </repo>
 </repositories>
