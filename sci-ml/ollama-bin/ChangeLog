@@ -3,8 +3,16 @@
 # ChangeLog for sci-ml/ollama-bin
 
 * ollama-bin-9999 Exp
-	(31 Jul 2025) jay <jaypeche@gmail.com>
+	(6 Aug 2025) jay <jaypeche@gmail.com>
 	+ Add ebuild 9999, at latest version
+
+* ollama-bin-0.11.2 release
+	(6 Aug 2025) jay <jaypeche@gmail.com>
+	+ Ollama version bump
+
+* ollama-bin-0.11.0 release
+	(5 Aug 2025) jay <jaypeche@gmail.com>
+	+ Ollama major version bump
 
 * ollama-bin-0.10.1 release
 	(31 Jul 2025) jay <jaypeche@gmail.com>
