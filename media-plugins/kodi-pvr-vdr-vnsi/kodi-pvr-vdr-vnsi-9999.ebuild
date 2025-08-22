@@ -1,9 +1,9 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
-inherit cmake kodi-addon
+inherit cmake
 
 DESCRIPTION="Kodi PVR addon VNSI"
 HOMEPAGE="https://github.com/kodi-pvr/pvr.vdr.vnsi"
@@ -17,7 +17,7 @@ case ${PV} in
 	;;
 *)
 	KEYWORDS="~amd64 ~x86"
-	CODENAME="Nexus"
+	CODENAME="Omega"
 	SRC_URI="https://github.com/kodi-pvr/pvr.vdr.vnsi/archive/${PV}-${CODENAME}.tar.gz -> ${P}.tar.gz"
 	S="${WORKDIR}/pvr.vdr.vnsi-${PV}-${CODENAME}"
 	;;
@@ -28,7 +28,7 @@ SLOT="0"
 IUSE=""
 
 DEPEND="
-	=media-tv/kodi-20*
+	=media-tv/kodi-21*
 	virtual/opengl
 	"
 
