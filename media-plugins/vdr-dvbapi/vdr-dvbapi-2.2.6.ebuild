@@ -14,6 +14,8 @@ SRC_URI="https://github.com/manio/vdr-plugin-dvbapi/archive/v${PV}.tar.gz -> ${M
 LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="amd64 x86"
+S="${WORKDIR}/${MY_P}"
+
 IUSE="cpu_flags_x86_3dnow cpu_flags_x86_mmx cpu_flags_x86_sse cpu_flags_x86_sse2 dvbcsa"
 
 DEPEND=">=media-video/vdr-2.4.1
@@ -21,10 +23,10 @@ DEPEND=">=media-video/vdr-2.4.1
 RDEPEND="${DEPEND}"
 
 DOCS=( "FAQ" "HISTORY" "INSTALL" "README" "FFdecsa/docs" )
+
 QA_FLAGS_IGNORED="
 	usr/lib/vdr/plugins/libvdr-dvbapi.*
 	usr/lib64/vdr/plugins/libvdr-dvbapi.*"
-S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	vdr-plugin-2_src_prepare
