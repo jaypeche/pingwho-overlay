@@ -7,11 +7,9 @@ inherit cmake
 
 DESCRIPTION="Kodi PVR addon VNSI"
 HOMEPAGE="https://github.com/kodi-pvr/pvr.vdr.vnsi"
-SRC_URI=""
 
 case ${PV} in
 9999)
-	SRC_URI=""
 	EGIT_REPO_URI="https://github.com/kodi-pvr/pvr.vdr.vnsi.git"
 	inherit git-r3
 	;;
