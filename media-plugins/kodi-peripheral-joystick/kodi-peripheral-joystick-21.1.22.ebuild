@@ -7,7 +7,6 @@ inherit cmake
 
 DESCRIPTION="Libretro compatibility layer for the Kodi Game API"
 HOMEPAGE="https://github.com/xbmc/peripheral.joystick"
-SRC_URI=""
 
 case ${PV} in
 9999)

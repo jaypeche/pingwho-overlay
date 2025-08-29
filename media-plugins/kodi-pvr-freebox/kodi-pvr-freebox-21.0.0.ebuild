@@ -7,11 +7,9 @@ inherit cmake
 
 DESCRIPTION="Kodi PVR addon Freebox TV"
 HOMEPAGE="https://github.com/aassif/pvr.freebox"
-SRC_URI=""
 
 case ${PV} in
 9999)
-	SRC_URI=""
 	EGIT_REPO_URI="https://github.com/aassif/pvr.freebox.git"
 	inherit git-r3
 	;;
