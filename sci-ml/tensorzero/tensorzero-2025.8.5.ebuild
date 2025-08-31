@@ -58,6 +58,8 @@ src_install() {
 
 pkg_postinst() {
 	einfo
+	einfo "After starting service, TensorZero UI is available at : http://localhost:4000"
+	einfo
 	einfo "To install TensorZero Python client, you should run :"
 	einfo "# pip install -r requirements.txt"
 	einfo "into /usr/share/tensorzero workdir."
