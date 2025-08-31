@@ -58,6 +58,7 @@ src_install() {
 
 pkg_postinst() {
 	einfo
+	einfo "By default, define an OPENAI_API_KEY variable, in /usr/share/tensorzero/.env"
 	einfo "After starting service, TensorZero UI is available at : http://localhost:4000"
 	einfo
 	einfo "To install TensorZero Python client, you should run :"
