@@ -10,9 +10,10 @@ HOMEPAGE="https://www.tensorzero.com/"
 LICENSE="Apache-2.0"
 SLOT="0"
 
-IUSE="examples +gateway systemd"
+IUSE="client examples +gateway systemd"
 
-DEPEND="gateway? ( app-containers/docker-compose:2 )"
+DEPEND="client? ( dev-python/pip )
+	gateway? ( app-containers/docker-compose:2 )"
 RDEPEND="${DEPEND}"
 
 case ${PV} in
@@ -61,10 +62,12 @@ pkg_postinst() {
         einfo "By default, define an OPENAI_API_KEY variable, in /usr/share/tensorzero/.env"
         einfo "After starting service, TensorZero UI is available at : http://localhost:4000"
         einfo
-        einfo "To install TensorZero Python client, you should run :"
-        einfo "# pip install -r requirements.txt"
-        einfo "into /usr/share/tensorzero workdir."
-        einfo
-        einfo "For more information, visit: ${HOMEPAGE}"
-        einfo
+	if use client; then
+		einfo "To install TensorZero Python client and dependencies, you should run :"
+		einfo "# pip install -r requirements.txt"
+		einfo "into /usr/share/tensorzero workdir."
+		einfo
+	fi
+	einfo "For more information, visit: ${HOMEPAGE}"
+	einfo
 }
