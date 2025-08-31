@@ -13,7 +13,7 @@ SLOT="0"
 IUSE="client examples +gateway systemd"
 
 DEPEND="client? ( dev-python/pip )
-	gateway? ( app-containers/docker
+	gateway? ( >=app-containers/docker-cli-28.0.4
 		app-containers/docker-compose:2 )"
 RDEPEND="${DEPEND}"
 
