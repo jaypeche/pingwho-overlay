@@ -1,0 +1,17 @@
+# Copyright 1999-2025 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+# ChangeLog for sci-ml/tensorzero
+
+* tensorzero-9999 Exp
+	(30 Aug 2025) jay <jaypeche@gmail.com>
+	+ Add latest main git branch 9999
+
+* tensorzero-2025.8.5 release
+	(30 Aug 2025) jay <jaypeche@gmail.com>
+	+ Tensorzero version bump
+	+ Quickstart example for tensorzero, by default
+	+ Review openrc/systemd service
+
+* tensorzero-2025.7.5 release
+	(3 Aug 2025) jay <jaypeche@gmail.com>
+	+ initial beta ebuild version for tensorzero

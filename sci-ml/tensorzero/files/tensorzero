@@ -1,0 +1,30 @@
+#!/sbin/openrc-run
+
+description="TensorZero service with docker compose"
+
+command="/usr/bin/docker"
+command_args="compose up -d --remove-orphans"
+command_user="root"
+command_group="root"
+command_background="yes"
+
+working_directory="/usr/share/tensorzero"
+pidfile="/run/tensorzero.pid"
+
+log="/var/log/tensorzero/tensorzero.log"
+
+start() {
+	ebegin "Starting $description"
+	exec >> >(logger -t "$RC_SVCNAME Start daemon" -p daemon.info)
+	start-stop-daemon --start --background --user "$command_user" --group "$command_group" \
+			--directory "$working_directory" --pidfile "$pidfile" --make-pidfile \
+			--exec $command $command_args -1 $log -2 $log
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping $description"
+	exec >> >(logger -t "$RC_SVCNAME Stop daemon" -p daemon.info)
+	start-stop-daemon --stop --pidfile "$pidfile"
+	eend $?
+}
