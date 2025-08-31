@@ -1,4 +1,3 @@
-# /usr/local/portage/sci-ml/tensorzero/tensorzero-9999.ebuild
 # Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
