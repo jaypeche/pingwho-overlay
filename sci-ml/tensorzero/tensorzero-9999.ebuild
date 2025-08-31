@@ -13,7 +13,8 @@ SLOT="0"
 IUSE="client examples +gateway systemd"
 
 DEPEND="client? ( dev-python/pip )
-	gateway? ( app-containers/docker-compose:2 )"
+	gateway? ( app-containers/docker
+		app-containers/docker-compose:2 )"
 RDEPEND="${DEPEND}"
 
 case ${PV} in
@@ -45,9 +46,9 @@ src_install() {
 	fi
 
 	if use systemd; then
-	      systemd_dounit "${FILESDIR}"/tensorzero.service
+		systemd_dounit "${FILESDIR}"/tensorzero.service
 	else
-                doinitd "${FILESDIR}"/tensorzero
+		doinitd "${FILESDIR}"/tensorzero
         fi
 
 	if use examples; then
@@ -58,10 +59,10 @@ src_install() {
 }
 
 pkg_postinst() {
-        einfo
-        einfo "By default, define an OPENAI_API_KEY variable, in /usr/share/tensorzero/.env"
-        einfo "After starting service, TensorZero UI is available at : http://localhost:4000"
-        einfo
+	einfo
+	einfo "By default, define an OPENAI_API_KEY variable, in /usr/share/tensorzero/.env"
+	einfo "After starting service, TensorZero UI is available at : http://localhost:4000"
+	einfo
 	if use client; then
 		einfo "To install TensorZero Python client and dependencies, you should run :"
 		einfo "# pip install -r requirements.txt"
