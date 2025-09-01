@@ -26,7 +26,7 @@ case ${PV} in
 	inherit git-r3
 	;;
 *)
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 x86"
 	SRC_URI="https://github.com/${PN}/${PN}/archive/refs/tags/${PV}.tar.gz"
 	RESTRICT="mirror"
 	;;
@@ -71,8 +71,7 @@ pkg_postinst() {
 	einfo
 	if use client; then
 		einfo "To install TensorZero Python client and dependencies, you should run :"
-		einfo "# pip install -r requirements.txt"
-		einfo "into /usr/share/tensorzero workdir."
+		einfo "# pip install tensorzero"
 		einfo
 	fi
 	einfo "For more information, visit: ${HOMEPAGE}"

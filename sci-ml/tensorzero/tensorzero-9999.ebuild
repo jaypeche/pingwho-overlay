@@ -71,8 +71,7 @@ pkg_postinst() {
 	einfo
 	if use client; then
 		einfo "To install TensorZero Python client and dependencies, you should run :"
-		einfo "# pip install -r requirements.txt"
-		einfo "into /usr/share/tensorzero workdir."
+		einfo "# pip install tensorzero"
 		einfo
 	fi
 	einfo "For more information, visit: ${HOMEPAGE}"
