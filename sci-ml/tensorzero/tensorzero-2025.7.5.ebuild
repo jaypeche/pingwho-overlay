@@ -55,7 +55,7 @@ src_install() {
 		systemd_dounit "${FILESDIR}"/tensorzero.service
 	else
 		doinitd "${FILESDIR}"/tensorzero
-        fi
+	fi
 
 	if use examples; then
 		dodoc -r examples || die "Examples install failed !"
