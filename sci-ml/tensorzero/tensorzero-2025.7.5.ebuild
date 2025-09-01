@@ -33,7 +33,12 @@ case ${PV} in
 esac
 
 pkg_setup() {
-	einfo "do self-tests for Docker, please wait..."
+	if [ -x "/usr/share/docker/contrib/check-config.sh" ]; then
+		einfo "Docker check-config present !"
+	else
+		eerror "Docker service seems not to be installated !"
+		eerror "Please make your checks..."
+	fi
 }
 
 src_install() {
