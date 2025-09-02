@@ -3,14 +3,12 @@
 
 EAPI=8
 
-inherit vdr-plugin-2 git-r3
+inherit vdr-plugin-2
 
 DESCRIPTION="VDR Plugin: VNSI Streamserver Plugin (FernetMenta branch)"
 HOMEPAGE="https://github.com/FernetMenta/vdr-plugin-vnsiserver"
 
-EGIT_REPO_URI="https://github.com/FernetMenta/vdr-plugin-vnsiserver.git"
-EGIT_BRANCH="master"
-EGIT_COMMIT="49003f036609ee2a0b8d819979c063d8f8d348c8"
+SRC_URI="https://github.com/FernetMenta/vdr-plugin-vnsiserver/archive/refs/tags/v${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -20,10 +18,10 @@ IUSE=""
 DEPEND=">=media-video/vdr-2.2.0"
 RDEPEND="${DEPEND}"
 
+S="${WORKDIR}/vdr-plugin-vnsiserver-${PV}"
+
 src_unpack () {
-	git-r3_src_unpack
-	cd "${WORKDIR}"
-	S="${WORKDIR}/${PN}-${PV}/"
+	default
 }
 
 src_prepare() {
