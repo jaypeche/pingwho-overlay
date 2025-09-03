@@ -46,7 +46,7 @@ src_install() {
 	dodir /usr/share/${PN} || die "dodir failed !"
 	if [ -d "${S}/examples/quickstart" ]; then
 		insinto /usr/share/${PN}
-		doins -r ${S}/examples/quickstart/ || die "doins failed !"
+		doins -r examples/quickstart/* || die "doins failed !"
 	else
 		eerror "Quickstart examples directory not found!"
 		die "Installation failed: Quickstart examples directory missing."
