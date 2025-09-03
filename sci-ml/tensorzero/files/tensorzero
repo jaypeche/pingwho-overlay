@@ -12,7 +12,7 @@ WorkingDirectory=/usr/share/tensorzero
 
 pidfile="/run/tensorzero.pid"
 
-log="/var/log/tensorzero/tensorzero.log"
+log="/var/log/tensorzero.log"
 
 start() {
 	ebegin "Starting $description"
