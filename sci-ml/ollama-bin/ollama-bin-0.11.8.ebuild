@@ -7,11 +7,14 @@ inherit check-reqs systemd
 
 DESCRIPTION="Local runner for LLMs"
 HOMEPAGE="https://ollama.com/"
-
 LICENSE="MIT"
-SLOT="0"
+
+S="${WORKDIR}"
 
 IUSE="cuda rocm systemd"
+
+RESTRICT="mirror"
+SLOT="0"
 
 CHECKREQS_DISK_BUILD="4G"
 QA_PREBUILT="*"
@@ -23,8 +26,6 @@ DEPEND="
 		dev-libs/rocm-opencl-runtime )
 	cuda? ( dev-util/nvidia-cuda-toolkit )
         systemd? ( sys-apps/systemd )"
-
-RESTRICT="mirror"
 
 case ${PV} in
 9999)
