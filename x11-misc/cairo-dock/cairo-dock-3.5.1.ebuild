@@ -29,7 +29,6 @@ RDEPEND="
 	sys-apps/dbus
 	x11-libs/cairo
 	x11-libs/pango
-	x11-libs/gtkglext
 	x11-libs/libXrender
 	x11-libs/gtk+:3
 	crypt? ( sys-libs/glibc )

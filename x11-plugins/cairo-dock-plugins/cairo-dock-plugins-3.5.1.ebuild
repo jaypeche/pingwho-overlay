@@ -26,7 +26,6 @@ RDEPEND="
 	gnome-base/librsvg:2
 	sys-apps/dbus
 	x11-libs/cairo
-	x11-libs/gtkglext
 	>=x11-misc/cairo-dock-${PV}
 	x11-libs/gtk+:3
 	alsa? ( media-libs/alsa-lib )
