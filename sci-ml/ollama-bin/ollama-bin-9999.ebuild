@@ -8,9 +8,6 @@ inherit check-reqs systemd
 DESCRIPTION="Local runner for LLMs"
 HOMEPAGE="https://ollama.com/"
 
-RESTRICT="mirror"
-S="${WORKDIR}"
-
 LICENSE="MIT"
 SLOT="0"
 
@@ -27,9 +24,10 @@ DEPEND="
 	cuda? ( dev-util/nvidia-cuda-toolkit )
         systemd? ( sys-apps/systemd )"
 
+RESTRICT="mirror"
+
 case ${PV} in
 9999)
-	KEYWORDS=""
 	SRC_URI="
 		amd64?	( https://ollama.com/download/ollama-linux-amd64.tgz -> ollama-linux-amd64-latest.tgz )
 		rocm?	( https://ollama.com/download/ollama-linux-amd64-rocm.tgz -> ollama-linux-amd64-rocm-latest.tgz )
