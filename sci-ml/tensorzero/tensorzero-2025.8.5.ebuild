@@ -54,7 +54,9 @@ src_install() {
 	if use systemd; then
 		systemd_dounit "${FILESDIR}"/tensorzero.service
 	else
-		doinitd "${FILESDIR}"/tensorzero
+		doinitd "${FILESDIR}"/tensorzero || die "doinitd failed !"
+		doconfd "${FILESDIR}"/tensorzero.confd || die "doconfd failed !"
+		mv "${D}/etc/conf.d/${PN}.confd" "${D}/etc/conf.d/${PN}" || die "rename confd failed !"
 	fi
 
 	if use examples; then
