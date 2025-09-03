@@ -18,7 +18,6 @@ DEPEND="client? ( dev-python/pip )
 		app-containers/docker-compose:2 )"
 RDEPEND="${DEPEND}"
 
-
 case ${PV} in
 9999)
 	KEYWORDS=""
@@ -28,8 +27,8 @@ case ${PV} in
 	EGIT_BRANCH="main"
 	;;
 *)
-	KEYWORDS="amd64 x86"
-	SRC_URI="https://github.com/${PN}/${PN}/archive/refs/tags/${PV}.tar.gz"
+	KEYWORDS="amd64"
+	SRC_URI="https://github.com/${PN}/${PN}/archive/refs/tags/${PV}.tar.gz -> ${PN}-${PV}.tar.gz"
 	RESTRICT="mirror"
 	;;
 esac
@@ -45,9 +44,9 @@ pkg_setup() {
 
 src_install() {
 	dodir /usr/share/${PN} || die "dodir failed !"
-	insinto /usr/share/${PN}
 	if [ -d "${S}/examples/quickstart" ]; then
-		doins -r ${S}/examples/quickstart/* || die "doins failed !"
+		insinto /usr/share/${PN}
+		doins -r "${S}/examples/quickstart/*" || die "doins failed !"
 	else
 		eerror "Quickstart examples directory not found!"
 		die "Installation failed: Quickstart examples directory missing."

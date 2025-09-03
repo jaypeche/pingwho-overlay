@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
- <longdescription>TensorZero is an open-source stack for industrial-grade LLM applications</longdescription>
+ <longdescription> TensorZero is an open-source stack for industrial-grade LLM applications </longdescription>
   <maintainer type="person">
     <email>jaypeche@gmail.com</email>
     <name>jaypeche</name>
   </maintainer>
   <use>
-	<flag name="client">Support for Python client and dependencies</flag>
-	<flag name="examples">Add examples for TensorZero App</flag>
-	<flag name="gateway">Include functional Gateway service</flag>
-	<flag name="systemd">Include systemd service</flag>
+   <flag name="client">Support for Python client and dependencies</flag>
+   <flag name="examples">Add examples for TensorZero App</flag>
+   <flag name="gateway">Include functional Gateway service</flag>
+   <flag name="systemd">Include systemd service</flag>
   </use>
   <upstream>
     <bugs-to>https://github.com/tensorzero/tensorzero/issues/</bugs-to>
