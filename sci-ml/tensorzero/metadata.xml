@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
- <longdescription> TensorZero is an open-source stack for industrial-grade LLM applications </longdescription>
+ <longdescription> 
+  TensorZero is an open-source stack for industrial-grade LLM applications.
+
+    Gateway: access every LLM provider through a unified API low latency
+    Observability: monitor your LLM systems, programmatically or with a UI
+    Optimization: optimize your prompts, models, and inference strategies
+    Evaluations: benchmark individual inferences or end-to-end workflows
+    Experimentation: deploy with built-in A/B testing, fallbacks, etc.
+</longdescription>
   <maintainer type="person">
     <email>jaypeche@gmail.com</email>
     <name>jaypeche</name>
