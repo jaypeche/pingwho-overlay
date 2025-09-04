@@ -1,31 +1,67 @@
 #!/sbin/openrc-run
+# Copyright 2021-2025 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
 
-description="TensorZero service with docker compose"
+name="$RC_SVCNAME"
+description="OpenRC script for managing the $name docker-compose project"
 
-command="/usr/bin/docker"
-command_args="compose up"
-command_user="root"
-command_group="root"
-command_background="yes"
+# Define app path
+path="/usr/share/$name"
 
-WorkingDirectory=/usr/share/tensorzero
+# Set default values
+DOCKER_COMPOSE="${DOCKER_COMPOSE:-docker compose} $DOCKER_COMPOSE_ARGS"
 
-pidfile="/run/tensorzero.pid"
+COMPOSE_PROJECT_NAME="${COMPOSE_PROJECT_NAME:-$name}"
 
-log="/var/log/tensorzero.log"
+# Export all variables used by docker-compose CLI
+export COMPOSE_PROJECT_NAME
+export COMPOSE_FILE
+export COMPOSE_PROFILES
+export COMPOSE_API_VERSION
+export DOCKER_HOST
+export DOCKER_TLS_VERIFY
+export DOCKER_CERT_PATH
+export COMPOSE_HTTP_TIMEOUT
+export COMPOSE_TLS_VERSION
+export COMPOSE_CONVERT_WINDOWS_PATHS
+export COMPOSE_PATH_SEPARATOR
+export COMPOSE_FORCE_WINDOWS_HOST
+export COMPOSE_IGNORE_ORPHANS
+export COMPOSE_PARALLEL_LIMIT
+export COMPOSE_INTERACTIVE_NO_CLI
+export COMPOSE_DOCKER_CLI_BUILD
+
+# Set up (external) networks
+for name in "${DOCKER_NETWORKS[@]}"
+do
+        # Create the network if needed
+        if ! docker network ls | awk '{ print $2 }' | grep -q "$name"
+        then
+                einfo "Creating docker network '$name'"
+                docker network create "$name" > /dev/null
+        fi
+
+        # Expose some variables for the networks
+        network_id="DOCKER_NETWORK_${name}_ID"
+
+        declare -gx DOCKER_NETWORK_${name}_ID="$(docker network ls | awk '$2 == "'"$name"'" { print $1 }')"
+        declare -gx DOCKER_NETWORK_${name}_GATEWAY="$(docker network inspect "${!network_id}" | jq -r '.[0].IPAM.Config[0].Gateway')"
+
+        unset network_id
+done
+
+depend() {
+        need docker
+}
 
 start() {
-	ebegin "Starting $description"
-	exec >> >(logger -t "$RC_SVCNAME Start daemon" -p daemon.info)
-	start-stop-daemon --start --background --user "$command_user" --group "$command_group" \
-			  --pidfile "$pidfile" --make-pidfile \
-			  --exec $command $command_args -1 $log -2 $log
-	eend $?
+	cd $path && $DOCKER_COMPOSE --project-directory "$COMPOSE_PROJECT_DIRECTORY" up -d
+}
+
+status() {
+	cd $path && $DOCKER_COMPOSE --project-directory "$COMPOSE_PROJECT_DIRECTORY" ps
 }
 
 stop() {
-	ebegin "Stopping $description"
-	exec >> >(logger -t "$RC_SVCNAME Stop daemon" -p daemon.info)
-	start-stop-daemon --stop --pidfile "$pidfile"
-	eend $?
+	cd $path && $DOCKER_COMPOSE --project-directory "$COMPOSE_PROJECT_DIRECTORY" down
 }
