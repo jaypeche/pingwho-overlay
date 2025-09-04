@@ -55,7 +55,7 @@ depend() {
 }
 
 start() {
-	$DOCKER_COMPOSE --project-directory "$COMPOSE_PROJECT_DIRECTORY" up -d
+	$DOCKER_COMPOSE --project-directory "$COMPOSE_PROJECT_DIRECTORY" up -d --remove-orphans
 }
 
 status() {
