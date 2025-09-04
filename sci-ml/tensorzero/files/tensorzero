@@ -4,14 +4,14 @@
 
 name="$RC_SVCNAME"
 description="OpenRC script for managing the $name docker-compose project"
-
-# Define app path
-path="/usr/share/$name"
+app_path="/usr/share/$name"
 
 # Set default values
 DOCKER_COMPOSE="${DOCKER_COMPOSE:-docker compose} $DOCKER_COMPOSE_ARGS"
 
 COMPOSE_PROJECT_NAME="${COMPOSE_PROJECT_NAME:-$name}"
+
+COMPOSE_PROJECT_DIRECTORY="${COMPOSE_PROJECT_DIRECTORY:-$app_path}"
 
 # Export all variables used by docker-compose CLI
 export COMPOSE_PROJECT_NAME
@@ -55,13 +55,13 @@ depend() {
 }
 
 start() {
-	cd $path && $DOCKER_COMPOSE --project-directory "$COMPOSE_PROJECT_DIRECTORY" up -d
+	$DOCKER_COMPOSE --project-directory "$COMPOSE_PROJECT_DIRECTORY" up -d
 }
 
 status() {
-	cd $path && $DOCKER_COMPOSE --project-directory "$COMPOSE_PROJECT_DIRECTORY" ps
+	$DOCKER_COMPOSE --project-directory "$COMPOSE_PROJECT_DIRECTORY" ps
 }
 
 stop() {
-	cd $path && $DOCKER_COMPOSE --project-directory "$COMPOSE_PROJECT_DIRECTORY" down
+	$DOCKER_COMPOSE --project-directory "$COMPOSE_PROJECT_DIRECTORY" down
 }
