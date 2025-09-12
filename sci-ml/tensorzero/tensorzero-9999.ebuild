@@ -70,8 +70,15 @@ pkg_postinst() {
 	einfo "After starting service, TensorZero UI is available at : http://localhost:4000"
 	einfo
 	if use client; then
-		einfo "To install TensorZero Python client and dependencies, you should run :"
-		einfo "# pip install tensorzero"
+		einfo "To install TensorZero Python client and dependencies,"
+		einfo " you should run pip inside a virtual environment:"
+		einfo
+		einfo "# mkdir /usr/share/${PN}/virtualenv"
+		einfo "# . /usr/share/${PN}/virtualenv/bin/activate"
+		einfo "# pip install ${PN}"
+		einfo
+		einfo " To exit the virtual environment, run:"
+		einfo "# deactivate"
 		einfo
 	fi
 	einfo "For more information, visit: ${HOMEPAGE}"
