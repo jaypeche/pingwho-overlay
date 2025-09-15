@@ -26,7 +26,7 @@ case ${PV} in
 	EGIT_BRANCH="main"
 	;;
 *)
-	KEYWORDS="amd64"
+	KEYWORDS="~amd64"
 	SRC_URI="https://github.com/${PN}/${PN}/archive/refs/tags/${PV}.tar.gz -> ${PN}-${PV}.tar.gz"
 	RESTRICT="mirror"
 	;;
