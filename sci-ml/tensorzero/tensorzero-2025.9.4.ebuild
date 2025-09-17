@@ -14,7 +14,7 @@ IUSE="client examples +gateway systemd"
 
 DEPEND="client? ( dev-python/pip )
 	gateway? ( app-containers/docker
-		app-containers/docker-cli
+		app-containers/docker-buildx
 		app-containers/docker-compose:2 )"
 RDEPEND="${DEPEND}"
 
