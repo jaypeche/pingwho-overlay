@@ -21,7 +21,6 @@ RDEPEND="${DEPEND}"
 case ${PV} in
 9999)
 	DEPEND+=" dev-vcs/git"
-	KEYWORDS="**"
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/${PN}/tensorzero.git"
 	EGIT_BRANCH="main"
