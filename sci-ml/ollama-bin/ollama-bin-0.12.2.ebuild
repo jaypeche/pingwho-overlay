@@ -30,9 +30,9 @@ DEPEND="
 case ${PV} in
 9999)
 	SRC_URI="
-		amd64?	( https://ollama.com/download/ollama-linux-amd64.tgz -> ollama-linux-amd64-latest.tgz )
-		rocm?	( https://ollama.com/download/ollama-linux-amd64-rocm.tgz -> ollama-linux-amd64-rocm-latest.tgz )
-		arm64?	( https://ollama.com/download/ollama-linux-arm64.tgz -> ollama-linux-arm64-latest.tgz )"
+		amd64?	( https://ollama.com/download/ollama-linux-amd64.tgz )
+		rocm?	( https://ollama.com/download/ollama-linux-amd64-rocm.tgz )
+		arm64?	( https://ollama.com/download/ollama-linux-arm64.tgz )"
 	;;
 *)
 	KEYWORDS="~amd64 ~arm64"
