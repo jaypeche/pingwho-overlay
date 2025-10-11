@@ -11,6 +11,5 @@ ACCT_USER_ID=-1
 ACCT_USER_HOME=/opt/ollama-bin
 ACCT_USER_HOME_PERMS=0755
 ACCT_USER_GROUPS=( "${PN}" video )
-ACCT_USER_SHELL=/sbin/nologin
 
 acct-user_add_deps
