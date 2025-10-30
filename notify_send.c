@@ -23,7 +23,7 @@ void show_notify_nothreat(void) {
 
 		printf ("\a");
 		notify_init ("ClamAV Realtime");
-		NotifyNotification * nothreat = notify_notification_new ("Clam,AV Realtime", "No threat found !", icon);
+		NotifyNotification * nothreat = notify_notification_new ("ClamAV Realtime", "No threat found !", icon);
 		notify_notification_show (nothreat, NULL);
 }
 
