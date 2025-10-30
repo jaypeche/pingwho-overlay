@@ -25,7 +25,7 @@ void show_notify_nothreat(void) {
     notify_notification_show(nothreat, NULL);
 }
 
-void show_notify_infected(void) {
+void show_notify_threat(void) {
 			static char *icon = "/usr/share/pixmaps/clamav-realtime.png";
 
 	/* Send Notification */
