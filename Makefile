@@ -30,8 +30,8 @@ install:
 		@cp $(NAME) $(DESTDIR)/$(PREFIX)
 		install -d $(DESTDIR)/$(PIXMAPS)
 		@cp files/$(NAME).png $(DESTDIR)/$(PIXMAPS)
-		install -d $(DESTDIR)/$(APPS)
-		@cp files/$(NAME).desktop $(DESTDIR)/$(APPS)
+#		install -d $(DESTDIR)/$(APPS)
+#		@cp files/$(NAME).desktop $(DESTDIR)/$(APPS)
 		install -d $(DESTDIR)/$(DOCDIR)/$(NAME)-$(VERSION)
 		for doc in $(DOCFILES); do \
 			cp $$doc $(DESTDIR)/$(DOCDIR)/$(NAME)-$(VERSION); \
