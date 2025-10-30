@@ -25,13 +25,13 @@ void show_notify_nothreat(void) {
     notify_notification_show(nothreat, NULL);
 }
 
-void show_notify_threat(void) {
+void show_notify_threat(threat_body) {
 			static char *icon = "/usr/share/pixmaps/clamav-realtime.png";
 
 	/* Send Notification */
     printf("\a");
     notify_init("ClamAV Realtime");
-    NotifyNotification *threat = notify_notification_new("ClamAV Realtime", "Infection detected!", icon);
+    NotifyNotification *threat = notify_notification_new("ClamAV Realtime", threat_body, icon);
     notify_notification_set_urgency(threat, NOTIFY_URGENCY_CRITICAL);
     notify_notification_show(threat, NULL);
 }
