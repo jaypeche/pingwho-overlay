@@ -43,6 +43,5 @@ clobber: clean
 		@echo Uninstall application...
 		rm -f $(PREFIX)/$(NAME)
 		rm -f $(PIXMAPS)/$(NAME).png
-		rm -f $(APPS)/$(NAME).desktop
 		[ -e $(DOCDIR)/$(NAME)-$(VERSION) ] && rm -Rf $(DOCDIR)/$(NAME)-$(VERSION);
 		@echo $(NAME) was successfully uninstalled !
