@@ -6,7 +6,7 @@
 * clamav-realtime-0.2.0 beta
 	(23 Oct 2025) jay <jaypeche@gmail.com>
 	+ First beta version (Ollama/Qwen3-coder:8b Local assistant)
-	+ Implemement fanotify kernel mecanism
+	+ Implemement fanotify recursive kernel mecanism
 
 * clamav-realtime-0.0.1-r1 revision 1
         (12 Nov 2013) jay <jaypeche@gmail.com>
