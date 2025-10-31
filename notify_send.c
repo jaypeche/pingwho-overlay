@@ -35,7 +35,7 @@ void show_notify_nothreat(void) {
     notify_notification_show(nothreat, NULL);
 }
 
-void show_notify_threat(threat_body) {
+void show_notify_threat(char threat_body) {
 			static char *icon = "/usr/share/pixmaps/clamav-realtime.png";
 
 	/* Send Threat Notification */
