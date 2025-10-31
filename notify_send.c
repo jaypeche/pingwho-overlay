@@ -5,6 +5,16 @@
 #include <limits.h>
 #include <libnotify/notify.h>
 
+void show_notify_updating(void) {
+    		static char *icon = "/usr/share/pixmaps/clamav-realtime.png";
+
+	/* Send Updating notification */
+    printf("\a");
+    notify_init("ClamAV Realtime");
+    NotifyNotification *updating = notify_notification_new("ClamAV Realtime", "Updating threats database", icon);
+    notify_notification_show(updating, NULL);
+}
+
 void show_notify_loading(void) {
 		static char *icon = "/usr/share/pixmaps/clamav-realtime.png";
 
@@ -28,7 +38,7 @@ void show_notify_nothreat(void) {
 void show_notify_threat(threat_body) {
 			static char *icon = "/usr/share/pixmaps/clamav-realtime.png";
 
-	/* Send Notification */
+	/* Send Threat Notification */
     printf("\a");
     notify_init("ClamAV Realtime");
     NotifyNotification *threat = notify_notification_new("ClamAV Realtime", threat_body, icon);
