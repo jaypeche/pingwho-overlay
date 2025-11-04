@@ -8,7 +8,7 @@ include Makefile.defs
 
 CC=		gcc
 STD=		_GNU_SOURCE
-OBJS=		fanotify_daemon.o
+OBJS=		fanotify_daemon.o notify_send.o
 LIBS=		-lnotify
 PKGCONFIG=	`pkg-config --cflags --libs libnotify`
 
