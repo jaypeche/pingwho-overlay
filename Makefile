@@ -1,6 +1,8 @@
 # Makefile for clamav-realtime v0.2.0b
 # Including platform definitions
 
+# WARNING: Gentoo masked package, build with AI assistant
+
 NAME=clamav-realtime
 VERSION=0.2.0b
 
@@ -9,8 +11,8 @@ include Makefile.defs
 CC=		gcc
 STD=		_GNU_SOURCE
 OBJS=		fanotify_daemon.o notify_send.o
-LIBS=		-lnotify
-PKGCONFIG=	`pkg-config --cflags --libs libnotify`
+LIBS=		-lnotify -lclamav
+PKGCONFIG=	`pkg-config --cflags --libs libnotify libclamav`
 
 .c.o:
 		@echo Compiling sources...
