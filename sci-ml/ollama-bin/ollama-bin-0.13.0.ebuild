@@ -11,7 +11,7 @@ LICENSE="MIT"
 
 S="${WORKDIR}"
 
-IUSE="cuda rocm systemd"
+IUSE="cuda rocm systemd vulkan"
 
 RESTRICT="mirror"
 SLOT="0"
@@ -26,6 +26,13 @@ DEPEND="
 		dev-libs/rocm-opencl-runtime )
 	cuda? ( dev-util/nvidia-cuda-toolkit )
         systemd? ( sys-apps/systemd )"
+
+BDEPEND="
+	vulkan? (
+                dev-util/vulkan-headers
+                media-libs/shaderc
+        )
+"
 
 case ${PV} in
 9999)
