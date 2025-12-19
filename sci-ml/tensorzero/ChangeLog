@@ -3,8 +3,12 @@
 # ChangeLog for sci-ml/tensorzero
 
 * tensorzero-9999 Exp
-	(14 Dec 2025) jay <jaypeche@gmail.com>
+	(19 Dec 2025) jay <jaypeche@gmail.com>
 	+ Add latest main git branch 9999
+
+* tensorzero-2025.12.3 release
+	(19 Dec 2025) jay <jaypeche@gmail.com>
+	+ Tensorzero version bump
 
 * tensorzero-2025.12.2 release
 	(14 Dec 2025) jay <jaypeche@gmail.com>
