@@ -1,10 +1,20 @@
-# Copyright 1999-2025 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 # ChangeLog for sci-ml/ollama-bin
 
 * ollama-bin-9999 Exp
-	(21 Dec 2025) jay <jaypeche@gmail.com>
+	(2 Feb 2026) jay <jaypeche@gmail.com>
 	+ Add ebuild 9999, at latest version
+
+* ollama-bin-0.15.4 release
+	(2 Feb 2026) jay <jaypeche@gmail.com>
+	+ Ollama version bump
+	+ fix unpack eclass for zst tarball
+
+* ollama-bin-0.14.2 release
+	(21 Jan 2026) jay <jaypeche@gmail.com>
+	+ Ollama version bump
+	+ fix unpack eclass for zst tarball
 
 * ollama-bin-0.13.5 release
 	(21 Dec 2025) jay <jaypeche@gmail.com>
