@@ -12,7 +12,7 @@ ACCT_USER_HOME=/opt/ollama-bin
 ACCT_USER_HOME_PERMS=0755
 ACCT_USER_GROUPS=( ollama )
 
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm64"
 
 IUSE="cuda"
 
