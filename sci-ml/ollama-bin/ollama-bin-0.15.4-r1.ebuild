@@ -38,9 +38,9 @@ case ${PV} in
 9999)
 	KEYWORDS=""
 	SRC_URI="
-		amd64?	( https://ollama.com/download/ollama-linux-amd64.tar.zst -> ollama-bin-amd64-${PV}.tar.zst )
-		rocm?	( https://ollama.com/download/ollama-linux-amd64-rocm.tar.zst -> ollama-bin-rocm-${PV}.tar.zst )
-		arm64?	( https://ollama.com/download/ollama-linux-arm64.tar.zst -> ollama-bin-arm64-${PV}.tar.zst )"
+		amd64?	( https://ollama.com/download/ollama-linux-amd64.tar.zst )
+		rocm?	( https://ollama.com/download/ollama-linux-amd64-rocm.tar.zst )
+		arm64?	( https://ollama.com/download/ollama-linux-arm64.tar.zst )"
 	;;
 *)
 	KEYWORDS="~amd64 ~arm64"

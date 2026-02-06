@@ -19,16 +19,15 @@ SLOT="0"
 CHECKREQS_DISK_BUILD="5G"
 QA_PREBUILT="*"
 
-DEPEND="
+DEPEND="app-arch/zstd
 	acct-group/ollama
-	=acct-user/ollama-0-r1
+	=acct-user/ollama-2
 	rocm? ( sci-libs/clblast
 		dev-libs/rocm-opencl-runtime )
 	cuda? ( dev-util/nvidia-cuda-toolkit )
         systemd? ( sys-apps/systemd )"
 
 BDEPEND="
-	app-arch/zstd
 	vulkan? (
                 dev-util/vulkan-headers
                 media-libs/shaderc
@@ -37,6 +36,7 @@ BDEPEND="
 
 case ${PV} in
 9999)
+	KEYWORDS=""
 	SRC_URI="
 		amd64?	( https://ollama.com/download/ollama-linux-amd64.tar.zst )
 		rocm?	( https://ollama.com/download/ollama-linux-amd64-rocm.tar.zst )
