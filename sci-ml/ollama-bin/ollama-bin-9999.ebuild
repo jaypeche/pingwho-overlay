@@ -68,8 +68,8 @@ pkg_pretend() {
 src_install() {
 	insinto "/opt/${PN}"
 	insopts -m0755
-	doins -r lib
-	doins -r bin
+	doins -r lib || die "doins failed !"
+	doins -r bin || die "doins failed !"
 
 	DISTRIBUTED_ATOM="/opt/${PN}/.ollama"
 
@@ -77,12 +77,12 @@ src_install() {
 	ewarn "INFO: Models and checksums saved into ${DISTRIBUTED_ATOM} are preserved..."
 	ewarn
 
-	dosym -r "/opt/${PN}/bin/ollama" "/usr/bin/ollama"
+	dosym -r "/opt/${PN}/bin/ollama" "/usr/bin/ollama" || die "dosym failed !"
 
 	if use systemd; then
-                systemd_dounit "${FILESDIR}"/ollama.service
+                systemd_dounit "${FILESDIR}"/ollama.service || die "dounit failed !"
         else
-                doinitd "${FILESDIR}"/ollama
+                doinitd "${FILESDIR}"/ollama || die "doinitd failed !"
         fi
 }
 
