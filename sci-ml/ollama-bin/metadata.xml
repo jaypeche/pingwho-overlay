@@ -14,9 +14,9 @@
     <name>jaypeche</name>
   </maintainer>
   <use>
-	<flag name="cuda"> Support for Nvidia CUDA compatible cards </flag>
-	<flag name="rocm"> Support for AMD ROCm compatible cards </flag>
-	<flag name="systemd"> Include Ollama systemd service </flag>
+   <flag name="cuda"> Support for Nvidia CUDA compatible cards </flag>
+   <flag name="rocm"> Support for AMD ROCm compatible cards </flag>
+   <flag name="systemd"> Include Ollama systemd service </flag>
   </use>
   <upstream>
     <bugs-to>https://github.com/ollama/ollama/issues/</bugs-to>

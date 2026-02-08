@@ -17,12 +17,12 @@
 * ollama-bin-0.15.4 release
 	(2 Feb 2026) jay <jaypeche@gmail.com>
 	+ Ollama version bump
-	+ fix unpack eclass for zst tarball
+	+ fix unpacker eclass for zst tarball
 
 * ollama-bin-0.14.2 release
 	(21 Jan 2026) jay <jaypeche@gmail.com>
 	+ Ollama version bump
-	+ fix unpack eclass for zst tarball
+	+ fix unpacker eclass for zst tarball
 
 * ollama-bin-0.13.5 release
 	(21 Dec 2025) jay <jaypeche@gmail.com>
