@@ -19,16 +19,15 @@ SLOT="0"
 CHECKREQS_DISK_BUILD="5G"
 QA_PREBUILT="*"
 
-DEPEND="
+DEPEND="app-arch/zstd
 	acct-group/ollama
-	=acct-user/ollama-0-r1
+	=acct-user/ollama-2
 	rocm? ( sci-libs/clblast
 		dev-libs/rocm-opencl-runtime )
 	cuda? ( dev-util/nvidia-cuda-toolkit )
         systemd? ( sys-apps/systemd )"
 
 BDEPEND="
-	app-arch/zstd
 	vulkan? (
                 dev-util/vulkan-headers
                 media-libs/shaderc
@@ -37,6 +36,7 @@ BDEPEND="
 
 case ${PV} in
 9999)
+	KEYWORDS=""
 	SRC_URI="
 		amd64?	( https://ollama.com/download/ollama-linux-amd64.tar.zst )
 		rocm?	( https://ollama.com/download/ollama-linux-amd64-rocm.tar.zst )
@@ -68,8 +68,8 @@ pkg_pretend() {
 src_install() {
 	insinto "/opt/${PN}"
 	insopts -m0755
-	doins -r lib
-	doins -r bin
+	doins -r lib || die "doins failed !"
+	doins -r bin || die "doins failed !"
 
 	DISTRIBUTED_ATOM="/opt/${PN}/.ollama"
 
@@ -77,12 +77,12 @@ src_install() {
 	ewarn "INFO: Models and checksums saved into ${DISTRIBUTED_ATOM} are preserved..."
 	ewarn
 
-	dosym -r "/opt/${PN}/bin/ollama" "/usr/bin/ollama"
+	dosym -r "/opt/${PN}/bin/ollama" "/usr/bin/ollama" || die "dosym failed !"
 
 	if use systemd; then
-                systemd_dounit "${FILESDIR}"/ollama.service
+                systemd_dounit "${FILESDIR}"/ollama.service || die "dounit failed !"
         else
-                doinitd "${FILESDIR}"/ollama
+                doinitd "${FILESDIR}"/ollama || die "doinitd failed !"
         fi
 }
 
