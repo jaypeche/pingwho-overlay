@@ -3,12 +3,17 @@
 # ChangeLog for sci-ml/tensorzero
 
 * tensorzero-9999 Exp
-	(13 Apr 2026) jay <jaypeche@gmail.com>
+	(14 Apr 2026) jay <jaypeche@gmail.com>
 	+ Add latest main git branch 9999
+
+* tensorzero-2026.4.0 release
+	(14 Apr 2026) jay <jaypeche@gmail.com>
+	+ Tensorzero version bump
 
 * tensorzero-2026.3.4 release
 	(13 Apr 2026) jay <jaypeche@gmail.com>
 	+ Tensorzero version bump
+	+ fix archive path
 
 * tensorzero-2026.2.2 release
 	(26 Feb 2026) jay <jaypeche@gmail.com>

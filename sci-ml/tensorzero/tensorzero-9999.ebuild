@@ -1,4 +1,4 @@
-# Copyright 1999-2025 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
@@ -10,7 +10,7 @@ HOMEPAGE="https://www.tensorzero.com/"
 LICENSE="Apache-2.0"
 SLOT="0"
 
-IUSE="client examples +gateway systemd"
+IUSE="client +examples +gateway systemd"
 
 DEPEND="client? ( dev-python/pip )
 	gateway? ( app-containers/docker
@@ -29,6 +29,7 @@ case ${PV} in
 	KEYWORDS="~amd64"
 	SRC_URI="https://github.com/${PN}/${PN}/archive/refs/tags/${PV}.tar.gz -> ${PN}-${PV}.tar.gz"
 	RESTRICT="mirror"
+	S="${WORKDIR}/${PN}-${PV}"
 	;;
 esac
 
@@ -43,9 +44,9 @@ pkg_setup() {
 
 src_install() {
 	dodir /usr/share/${PN} || die "dodir failed !"
-	if [ -d "${S}/examples/quickstart" ]; then
+	if [ -d "${S}/examples/docs/guides/quickstart" ]; then
 		insinto /usr/share/${PN}
-		doins -r examples/quickstart/* || die "doins failed !"
+		doins -r examples/docs/guides/quickstart/* || die "doins failed !"
 	else
 		eerror "Quickstart examples directory not found!"
 		die "Installation failed: Quickstart examples directory missing."
