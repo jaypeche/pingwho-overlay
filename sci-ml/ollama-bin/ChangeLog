@@ -9,6 +9,7 @@
 * ollama-bin-0.30.5 release
         (5 Jun 2026) jay <jaypeche@gmail.com>
         + Ollama major version bump
+	+ New llama-server implementation
 
 * ollama-bin-0.24.0 release
         (25 May 2026) jay <jaypeche@gmail.com>
