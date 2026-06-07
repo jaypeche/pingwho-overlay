@@ -64,15 +64,18 @@ pkg_pretend() {
 	fi
 }
 
+src_prepare() {
+	default
+	if ! use cuda; then
+		rm -rf "${S}"/lib/ollama/{cuda_v12,cuda_v13} || die
+	fi
+}
+
 src_install() {
 	insinto "/opt/${PN}"
 	insopts -m0755
 	doins -r lib || die "doins failed !"
 	doins -r bin || die "doins failed !"
-
-		if ! use cuda; then
-			rm -rf "${ED}"/opt/ollama/{cuda_v12,cuda_v13} || die
-		fi
 
 	DISTRIBUTED_ATOM="/opt/${PN}/.ollama"
 

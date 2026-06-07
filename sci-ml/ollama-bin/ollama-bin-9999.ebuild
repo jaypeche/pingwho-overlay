@@ -21,9 +21,8 @@ QA_PREBUILT="*"
 
 DEPEND="app-arch/zstd
 	acct-group/ollama
-	=acct-user/ollama-2
-	rocm? ( sci-libs/clblast
-		dev-libs/rocm-opencl-runtime )
+	>=acct-user/ollama-2[cuda?]
+	rocm? ( dev-libs/rocm-opencl-runtime )
 	cuda? ( dev-util/nvidia-cuda-toolkit )
         systemd? ( sys-apps/systemd )"
 
@@ -65,6 +64,13 @@ pkg_pretend() {
 	fi
 }
 
+src_prepare() {
+	default
+	if ! use cuda; then
+		rm -rf "${S}"/lib/ollama/{cuda_v12,cuda_v13} || die
+	fi
+}
+
 src_install() {
 	insinto "/opt/${PN}"
 	insopts -m0755
@@ -77,7 +83,11 @@ src_install() {
 	ewarn "INFO: Models and checksums saved into ${DISTRIBUTED_ATOM} are preserved..."
 	ewarn
 
+	# Since 0.30.x version, linking new llama-server
 	dosym -r "/opt/${PN}/bin/ollama" "/usr/bin/ollama" || die "dosym failed !"
+	dosym -r "/opt/${PN}/lib/ollama/llama-server" "/usr/bin/llama-server" || die "dosym failed !"
+	dosym -r "/opt/${PN}/lib/ollama/llama-quantize" "/usr/bin/llama-quantize" || die "dosym failed !"
+
 
 	if use systemd; then
                 systemd_dounit "${FILESDIR}"/ollama.service || die "dounit failed !"
