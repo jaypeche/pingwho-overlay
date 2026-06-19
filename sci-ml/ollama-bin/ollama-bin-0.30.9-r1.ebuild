@@ -109,6 +109,7 @@ pkg_postinst() {
 	einfo
 	einfo "Please, add your_user to ollama group,"
 	einfo "# usermod -a -G ollama your_user"
+	einfo "# usermod -a -G render,video ollama"
 	einfo
 	einfo "# ollama serve (standalone,systemd,openrc)"
 	einfo "$ ollama run llama3:3b (client)"
