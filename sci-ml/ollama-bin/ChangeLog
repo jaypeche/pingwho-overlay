@@ -6,6 +6,10 @@
 	(17 Jun 2026) jay <jaypeche@gmail.com>
 	+ Add ebuild 9999, at latest version
 
+* ollama-bin-0.30.9 rev 1
+        (19 Jun 2026) jay <jaypeche@gmail.com>
+        + Add render && video groups for ollama
+
 * ollama-bin-0.30.9 release
         (17 Jun 2026) jay <jaypeche@gmail.com>
         + Ollama version bump
