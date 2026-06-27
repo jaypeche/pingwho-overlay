@@ -3,10 +3,14 @@
 # ChangeLog for sci-ml/ollama-bin
 
 * ollama-bin-9999 Exp
-	(17 Jun 2026) jay <jaypeche@gmail.com>
+	(27 Jun 2026) jay <jaypeche@gmail.com>
 	+ Add ebuild 9999, at latest version
 
-* ollama-bin-0.30.9 rev 1
+* ollama-bin-0.30.11 release
+        (27 Jun 2026) jay <jaypeche@gmail.com>
+        + Ollama version bump
+
+* ollama-bin-0.30.9 revision 1
         (19 Jun 2026) jay <jaypeche@gmail.com>
         + Add render && video groups for ollama
 
