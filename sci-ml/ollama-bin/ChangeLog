@@ -9,6 +9,7 @@
 * ollama-bin-0.32.1 release
         (21 Jul 2026) jay <jaypeche@gmail.com>
         + Ollama version bump
+	+ minors fixes from guru overlay
 
 * ollama-bin-0.32.0 release
         (14 Jul 2026) jay <jaypeche@gmail.com>
