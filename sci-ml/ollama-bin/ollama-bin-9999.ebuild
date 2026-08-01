@@ -30,7 +30,7 @@ DEPEND="app-arch/zstd
 BDEPEND="dev-util/patchelf"
 
 RDEPEND="vulkan? (
-                media-libs/vulkan-loader
+        media-libs/vulkan-loader
 		media-libs/shaderc
         )
 "
