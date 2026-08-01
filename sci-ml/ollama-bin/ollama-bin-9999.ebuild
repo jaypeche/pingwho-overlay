@@ -25,7 +25,7 @@ DEPEND="app-arch/zstd
 	acct-group/video
 	>=acct-user/ollama-2[cuda?]
 	cuda? ( dev-util/nvidia-cuda-toolkit )
-        systemd? ( sys-apps/systemd )"
+    systemd? ( sys-apps/systemd )"
 
 BDEPEND="dev-util/patchelf"
 
