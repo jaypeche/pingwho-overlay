@@ -19,15 +19,15 @@ SLOT="0"
 CHECKREQS_DISK_BUILD="5G"
 QA_PREBUILT="*"
 
-DEPEND="app-arch/zstd
-	acct-group/ollama
+DEPEND="acct-group/ollama
 	acct-group/render
 	acct-group/video
 	>=acct-user/ollama-2[cuda?]
 	cuda? ( dev-util/nvidia-cuda-toolkit )
     systemd? ( sys-apps/systemd )"
 
-BDEPEND="dev-util/patchelf"
+BDEPEND="app-arch/zstd
+		dev-util/patchelf"
 
 RDEPEND="vulkan? (
         media-libs/vulkan-loader
