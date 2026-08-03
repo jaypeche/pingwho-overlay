@@ -24,16 +24,15 @@ DEPEND="acct-group/ollama
 	acct-group/video
 	>=acct-user/ollama-2[cuda?]
 	cuda? ( dev-util/nvidia-cuda-toolkit )
-    systemd? ( sys-apps/systemd )"
+	systemd? ( sys-apps/systemd )"
 
 BDEPEND="app-arch/zstd
-		dev-util/patchelf"
+	dev-util/patchelf"
 
 RDEPEND="vulkan? (
-        media-libs/vulkan-loader
-		media-libs/shaderc
-        )
-"
+	media-libs/vulkan-loader
+	media-libs/shaderc
+)"
 
 case ${PV} in
 9999)
