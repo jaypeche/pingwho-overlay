@@ -3,24 +3,27 @@
 
 <pkgmetadata>
  <longdescription>
- Ollama is an open-source software platform developed by Jeffrey Morgan and Michael Chiang in 2023 for running and managing large language models on local computers and through hosted cloud models
+ Ollama is an open-source platform for running and managing large language models (LLMs) locally and via hosted cloud models. It supports various hardware accelerators, including CUDA, ROCm, and Vulkan, and provides a simple interface to interact with LLMs.
  </longdescription>
-  <maintainer type="person">
-    <email>xgqt@xgqt.org</email>
-    <name>Maciej Barć</name>
-  </maintainer>
-  <maintainer type="person">
-    <email>contact@pingwho.org</email>
-    <name>jaypeche</name>
-  </maintainer>
-  <use>
-   <flag name="cuda"> Support for Nvidia CUDA compatible cards </flag>
-   <flag name="rocm"> Support for AMD ROCm compatible cards </flag>
-   <flag name="systemd"> Include Ollama systemd service </flag>
-   <flag name="vulkan"> Support for Vulkan API </flag>
-  </use>
-  <upstream>
-    <bugs-to>https://github.com/ollama/ollama/issues/</bugs-to>
-    <remote-id type="github">ollama/ollama</remote-id>
-  </upstream>
+
+ <maintainer type="person">
+   <email>xgqt@xgqt.org</email>
+   <name>Maciej Barć</name>
+ </maintainer>
+ <maintainer type="person">
+   <email>contact@pingwho.org</email>
+   <name>jaypeche</name>
+ </maintainer>
+
+ <use>
+   <flag name="cuda">Support for Nvidia CUDA compatible cards</flag>
+   <flag name="rocm">Support for AMD ROCm compatible cards</flag>
+   <flag name="systemd">Include Ollama systemd service</flag>
+   <flag name="vulkan">Support for Vulkan API</flag>
+ </use>
+
+ <upstream>
+   <bugs-to>https://github.com/ollama/ollama/issues/</bugs-to>
+   <remote-id type="github">ollama/ollama</remote-id>
+ </upstream>
 </pkgmetadata>
