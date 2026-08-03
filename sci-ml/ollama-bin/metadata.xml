@@ -3,7 +3,7 @@
 
 <pkgmetadata>
  <longdescription>
- Local runner for LLMs like Mistral, Qwen, Gemma, and Cloud computing models
+ Ollama is an open-source software platform developed by Jeffrey Morgan and Michael Chiang in 2023 for running and managing large language models on local computers and through hosted cloud models
  </longdescription>
   <maintainer type="person">
     <email>xgqt@xgqt.org</email>
