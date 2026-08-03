@@ -1,4 +1,4 @@
-# Copyriht 1999-2026 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -101,15 +101,15 @@ src_install() {
 
 
 	if use systemd; then
-                systemd_dounit "${FILESDIR}"/ollama.service || die "dounit failed !"
-        else
-                doinitd "${FILESDIR}"/ollama || die "doinitd failed !"
-        fi
+		systemd_dounit "${FILESDIR}"/ollama.service || die "dounit failed !"
+	else
+		doinitd "${FILESDIR}"/ollama || die "doinitd failed !"
+	fi
 }
 
 pkg_preinst() {
-        keepdir /var/log/ollama
-        fowners ollama:ollama /var/log/ollama
+	keepdir /var/log/ollama
+	fowners ollama:ollama /var/log/ollama
 }
 
 pkg_postinst() {
