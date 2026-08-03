@@ -3,7 +3,7 @@
 
 <pkgmetadata>
  <longdescription>
- Get up and running with large language models
+ Local runner for LLMs like Mistral, Qwen, Gemma, and Cloud computing models
  </longdescription>
   <maintainer type="person">
     <email>xgqt@xgqt.org</email>

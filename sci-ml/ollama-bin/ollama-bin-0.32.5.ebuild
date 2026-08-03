@@ -5,16 +5,18 @@ EAPI=8
 
 inherit check-reqs systemd unpacker
 
-DESCRIPTION="Local runner for LLMs"
+DESCRIPTION="Get up and running with Llama 3, Mistral, Gemma, and other language models "
 HOMEPAGE="https://ollama.com/"
-LICENSE="MIT"
 
 S="${WORKDIR}"
+
+LICENSE="MIT"
+
+SLOT="0"
 
 IUSE="cuda rocm systemd vulkan"
 
 RESTRICT="mirror"
-SLOT="0"
 
 CHECKREQS_DISK_BUILD="5G"
 QA_PREBUILT="*"
@@ -36,7 +38,6 @@ RDEPEND="vulkan? (
 
 case ${PV} in
 9999)
-	KEYWORDS=""
 	SRC_URI="
 		amd64?	( https://ollama.com/download/ollama-linux-amd64.tar.zst )
 		rocm?	( https://ollama.com/download/ollama-linux-amd64-rocm.tar.zst )
@@ -45,9 +46,12 @@ case ${PV} in
 *)
 	KEYWORDS="~amd64 ~arm64"
 	SRC_URI="
-		amd64? ( https://github.com/ollama/ollama/releases/download/v${PV}/ollama-linux-amd64.tar.zst -> ollama-bin-amd64-${PV}.tar.zst )
-		rocm? ( https://github.com/ollama/ollama/releases/download/v${PV}/ollama-linux-amd64-rocm.tar.zst -> ollama-bin-rocm-${PV}.tar.zst )
-		arm64? ( https://github.com/ollama/ollama/releases/download/v${PV}/ollama-linux-arm64.tar.zst -> ollama-bin-arm64-${PV}.tar.zst )"
+		amd64? ( https://github.com/ollama/ollama/releases/download/v${PV}/ollama-linux-amd64.tar.zst \
+		-> ollama-bin-amd64-${PV}.tar.zst )
+		rocm? ( https://github.com/ollama/ollama/releases/download/v${PV}/ollama-linux-amd64-rocm.tar.zst \
+		-> ollama-bin-rocm-${PV}.tar.zst )
+		arm64? ( https://github.com/ollama/ollama/releases/download/v${PV}/ollama-linux-arm64.tar.zst \
+		-> ollama-bin-arm64-${PV}.tar.zst )"
 	;;
 esac
 
@@ -98,7 +102,6 @@ src_install() {
 	dosym -r "/opt/${PN}/bin/ollama" "/usr/bin/ollama" || die "dosym failed !"
 	dosym -r "/opt/${PN}/lib/ollama/llama-server" "/usr/bin/llama-server" || die "dosym failed !"
 	dosym -r "/opt/${PN}/lib/ollama/llama-quantize" "/usr/bin/llama-quantize" || die "dosym failed !"
-
 
 	if use systemd; then
 		systemd_dounit "${FILESDIR}"/ollama.service || die "dounit failed !"
