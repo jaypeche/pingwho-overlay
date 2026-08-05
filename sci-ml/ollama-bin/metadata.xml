@@ -3,7 +3,8 @@
 
 <pkgmetadata>
  <longdescription>
- Ollama is an open-source platform for running and managing large language models (LLMs) locally and via hosted cloud models. It supports various hardware accelerators, including CUDA, ROCm, and Vulkan, and provides a simple interface to interact with LLMs.
+ Ollama is an open-source platform for running and managing large language models (LLMs) locally and via hosted cloud models.
+ It supports various hardware accelerators, including CUDA, ROCm, and Vulkan, and provides a simple interface to interact with LLMs.
  </longdescription>
 
  <maintainer type="person">
