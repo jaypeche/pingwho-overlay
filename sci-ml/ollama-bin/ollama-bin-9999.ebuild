@@ -94,9 +94,9 @@ src_install() {
 
 	DISTRIBUTED_ATOM="/opt/${PN}/.ollama"
 
-	ewarn
-	ewarn "INFO: Models and checksums saved into ${DISTRIBUTED_ATOM} are preserved..."
-	ewarn
+	einfo
+	einfo "INFO: Models and checksums saved into ${DISTRIBUTED_ATOM} are preserved..."
+	einfo
 
 	# Since 0.30.x version, linking new llama-server
 	dosym -r "/opt/${PN}/bin/ollama" "/usr/bin/ollama" || die "dosym failed !"
@@ -113,6 +113,7 @@ src_install() {
 
 pkg_preinst() {
 	keepdir /var/log/ollama
+	fperms 750 /var/log/ollama
 	fowners ollama:ollama /var/log/ollama
 }
 
@@ -128,5 +129,10 @@ pkg_postinst() {
 	einfo "$ ollama run llama3:3b (client)"
 	einfo
 	einfo "Browse available models at: https://ollama.com/library/"
+	einfo
+	einfo
+	einfo "Ollama binds 127.0.0.1 port 11434 by default."
+	einfo "Change the bind address with the OLLAMA_HOST environment variable."
+	einfo "See https://docs.ollama.com/faq for more info"
 	einfo
 }
