@@ -6,6 +6,10 @@
 	(7 Aug 2026) jay <jaypeche@gmail.com>
 	+ Add ebuild 9999, at latest version
 
+* ollama-bin-0.32.6-r1 revision 1
+        (10 Aug 2026) jay <jaypeche@gmail.com>
+        + various fixes from gentoo repo
+
 * ollama-bin-0.32.6 release
         (7 Aug 2026) jay <jaypeche@gmail.com>
         + Ollama version bump

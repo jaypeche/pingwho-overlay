@@ -106,7 +106,8 @@ src_install() {
 	if use systemd; then
 		systemd_dounit "${FILESDIR}"/ollama.service || die "dounit failed !"
 	else
-		doinitd "${FILESDIR}"/ollama || die "doinitd failed !"
+		newinitd "${FILESDIR}"/ollama.initd || die "newinitd failed !"
+		newconfd "${FILESDIR}"/ollama.confd || die "newconfd failed !"
 	fi
 }
 
