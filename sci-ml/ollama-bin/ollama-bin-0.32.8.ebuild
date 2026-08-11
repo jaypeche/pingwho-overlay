@@ -25,8 +25,13 @@ DEPEND="acct-group/ollama
 	acct-group/render
 	acct-group/video
 	>=acct-user/ollama-2[cuda?]
-	cuda? ( dev-util/nvidia-cuda-toolkit )
-	systemd? ( sys-apps/systemd )"
+	amd64? (
+		cuda? ( dev-util/nvidia-cuda-toolkit )
+		rocm? ( dev-libs/rocm-opencl-runtime
+			sci-libs/clblast )
+	)
+	systemd? ( sys-apps/systemd )
+	!!sci-ml/ollama"
 
 BDEPEND="app-arch/zstd
 	dev-util/patchelf"
@@ -74,8 +79,6 @@ src_prepare() {
 	if ! use cuda; then
 		rm -rf "${S}"/lib/ollama/{cuda_v12,cuda_v13} || die
 	fi
-
-	# no need to strip for rocm, because the folder containing it wouldn't even be fetched and unpacked
 
 	# Shipped upstream libraries come with '$ORIGIN:/build/llama-server-cpu/bin:' set in their RUNPATH
 	# scanelf complains about it during install, and we only need $ORIGIN
