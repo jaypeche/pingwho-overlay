@@ -130,7 +130,6 @@ pkg_postinst() {
 	einfo
 	einfo "Browse available models at: https://ollama.com/library/"
 	einfo
-	einfo
 	einfo "Ollama binds 127.0.0.1 port 11434 by default."
 	einfo "Change the bind address with the OLLAMA_HOST environment variable."
 	einfo "See https://docs.ollama.com/faq for more info"
