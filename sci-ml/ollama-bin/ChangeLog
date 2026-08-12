@@ -6,6 +6,10 @@
 	(13 Aug 2026) jay <jaypeche@gmail.com>
 	+ Add ebuild 9999, at latest version
 
+* ollama-bin-0.32.9-r1 release
+        (13 Aug 2026) jay <jaypeche@gmail.com>
+        + no checksum for 9999 live ebuild
+
 * ollama-bin-0.32.9 release
         (13 Aug 2026) jay <jaypeche@gmail.com>
         + Ollama version bump

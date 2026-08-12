@@ -47,6 +47,7 @@ case ${PV} in
 		amd64?	( https://ollama.com/download/ollama-linux-amd64.tar.zst )
 		rocm?	( https://ollama.com/download/ollama-linux-amd64-rocm.tar.zst )
 		arm64?	( https://ollama.com/download/ollama-linux-arm64.tar.zst )"
+	RESTRICT+=" checksum"
 	;;
 *)
 	KEYWORDS="~amd64 ~arm64"
