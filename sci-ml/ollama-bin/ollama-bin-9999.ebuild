@@ -21,6 +21,11 @@ RESTRICT="mirror"
 CHECKREQS_DISK_BUILD="5G"
 QA_PREBUILT="*"
 
+# No checksum for 9999 live build
+if [[ ${PV} == "9999*" ]]; then
+		RESTRICT+=" checksum"
+fi
+
 DEPEND="acct-group/ollama
 	acct-group/render
 	acct-group/video
@@ -61,9 +66,6 @@ case ${PV} in
 esac
 
 pkg_setup() {
-	if [[ ${PV} == "9999*" ]]; then
-		RESTRICT+=" checksum"
-	fi
 	check-reqs_pkg_setup
 }
 
