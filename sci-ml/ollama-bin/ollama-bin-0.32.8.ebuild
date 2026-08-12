@@ -5,7 +5,7 @@ EAPI=8
 
 inherit check-reqs systemd unpacker
 
-DESCRIPTION="Get up and running with Llama 3, Mistral, Gemma, and other language models "
+DESCRIPTION="Get up and running with Llama 3, Mistral, Gemma, and other language models"
 HOMEPAGE="https://ollama.com/"
 
 S="${WORKDIR}"
