@@ -47,12 +47,6 @@ case ${PV} in
 		amd64?	( https://ollama.com/download/ollama-linux-amd64.tar.zst )
 		rocm?	( https://ollama.com/download/ollama-linux-amd64-rocm.tar.zst )
 		arm64?	( https://ollama.com/download/ollama-linux-arm64.tar.zst )"
-	einfo
-        einfo "You are using 9999 live ebuild version,"
-        einfo "It should be necessary to execute this command to refresh live ebuild checksum :"
-        einfo
-        einfo "# ebuild ollama-bin-9999.ebuild digest"
-        einfo
 	;;
 *)
 	KEYWORDS="~amd64 ~arm64"
