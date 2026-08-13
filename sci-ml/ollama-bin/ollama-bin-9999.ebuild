@@ -19,11 +19,12 @@ IUSE="cuda rocm systemd vulkan"
 RESTRICT="mirror"
 
 CHECKREQS_DISK_BUILD="5G"
+
 QA_PREBUILT="*"
 
-# No checksum for 9999 live build
 if [[ ${PV} == "9999*" ]]; then
 		RESTRICT+=" checksum"
+		QA_PREBUILT=""
 fi
 
 DEPEND="acct-group/ollama
