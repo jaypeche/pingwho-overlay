@@ -66,12 +66,10 @@ pkg_setup() {
 
 pkg_pretend() {
 	if [[ ${PV} == 9999 ]]; then
-		ewarn
 		ewarn "If you are using the live version of this ebuild; Portage may return a checksum error to you."
 		ewarn "It will then be necessary to regenerate the Manifest with this command :"
 		ewarn
 		ewarn "# ebuild ollama-bin-9999.ebuild digest"
-		ewarn
 	fi
 
 	if use rocm; then
