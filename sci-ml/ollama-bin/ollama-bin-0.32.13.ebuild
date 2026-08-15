@@ -19,13 +19,7 @@ IUSE="cuda rocm systemd vulkan"
 RESTRICT="mirror"
 
 CHECKREQS_DISK_BUILD="5G"
-
 QA_PREBUILT="*"
-
-if [[ ${PV} == "9999*" ]]; then
-		RESTRICT+=" checksum"
-		QA_PREBUILT=""
-fi
 
 DEPEND="acct-group/ollama
 	acct-group/render
@@ -71,6 +65,15 @@ pkg_setup() {
 }
 
 pkg_pretend() {
+	if [[ ${PV} == 9999 ]]; then
+		ewarn
+		ewarn "If you are using the live version of this ebuild; Portage may return a checksum error to you."
+		ewarn "It will then be necessary to regenerate the Manifest with this command :"
+		ewarn
+		ewarn "# ebuild ollama-bin-9999.ebuild digest"
+		ewarn
+	fi
+
 	if use rocm; then
 		ewarn "WARNING: AMD & Nvidia support in this ebuild are experimental"
 		einfo "If you run into issues, especially compiling dev-libs/rocm-opencl-runtime"
