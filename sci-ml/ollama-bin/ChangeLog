@@ -6,9 +6,10 @@
 	(24 Oct 2026) jay <jaypeche@gmail.com>
 	+ Add ebuild 9999, at latest version
 
-* ollama-bin-0.40.10 release
+* ollama-bin-0.40.10 release 1
         (24 Oct 2026) jay <jaypeche@gmail.com>
         + Ollama version bump
+	- mask ollama sources
 
 * ollama-bin-0.40.7 release
         (21 Oct 2026) jay <jaypeche@gmail.com>
