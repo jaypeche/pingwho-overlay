@@ -31,7 +31,6 @@ DEPEND="acct-group/ollama
 			sci-libs/clblast )
 	)
 	systemd? ( sys-apps/systemd )
-	!!sci-ml/ggml
 	!!sci-ml/ollama"
 
 BDEPEND="app-arch/zstd
